@@ -116,7 +116,7 @@ contract EventCoin is ERC721Full, Ownable {
     
     function MakeAvailableSale(uint token_id) public {
         require(msg.sender == event_tokens[token_id].CurrentOwner,"You are not the owner of this event token.");
-        require(event_tokens[token_id].Resale = true, "This event token can not be resold.");
+        require(event_tokens[token_id].Resale == true, "This event token can not be resold.");
         
         event_tokens[token_id].AvailableResale = true;
     }
